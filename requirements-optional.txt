@@ -1,0 +1,3 @@
+# Optional: headless-browser rendering for JS-heavy sites (the --render flag).
+# After installing, fetch the browser binary once:  playwright install chromium
+playwright>=1.44

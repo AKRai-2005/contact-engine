@@ -1,0 +1,6 @@
+requests>=2.31
+beautifulsoup4>=4.12
+phonenumbers>=8.13
+dnspython>=2.6
+fastapi>=0.110
+uvicorn>=0.29

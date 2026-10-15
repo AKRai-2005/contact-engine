@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+venv/
+
+# Local data / build artifacts
+*.db
+data/
+results.csv
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
