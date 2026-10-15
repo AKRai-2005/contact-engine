@@ -1,13 +1,24 @@
 # Contact Engine
 
-A legitimate, Hunter-style contact-discovery engine. It finds and verifies the contact
-details organisations **publish about themselves**, learns each company's email naming
-pattern, and enriches a name + domain into a best-guess work email with a confidence score.
+**Find a work email from a person's name and their company's domain — using only public,
+self-published data.** A legitimate, Hunter-style contact-discovery engine: it reads the
+contact details organisations publish about themselves, learns each company's email naming
+pattern, and turns `name + company.com` into a best-guess address with a confidence score,
+verified over HTTPS or SMTP.
 
-It uses only public, self-published data. It does **not** log into or scrape third-party
-profile sites (LinkedIn, etc.), and it has no feature that reveals an individual's private
-email or phone — that capability, which the LinkedIn-scraping tools sell, depends on mass
-profile scraping and covert contact-book harvesting and is deliberately not built here.
+### Input: a name + a company domain — **not** a LinkedIn URL
+
+```bash
+python engine.py enrich "Jane Doe" acme.com
+```
+
+This is **not** a LinkedIn lookup tool. It takes a *name and a company domain*, and it
+**refuses** LinkedIn / Facebook / Instagram / X URLs by design. It does not log into or
+scrape profile sites, and has no feature that reveals an individual's private email or
+mobile — the capability SignalHire/ContactOut/Apollo sell, which depends on mass profile
+scraping and contributory contact-book harvesting, is deliberately not built here. For that
+kind of coverage the only legitimate route is **licensed data** via `--provider` (see below),
+not scraping.
 
 ## Layout
 
